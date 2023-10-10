@@ -9,7 +9,7 @@ const material = new THREE.MeshLambertMaterial({
   transparent: true,
   opacity: 0.8,
   //   side: 2,
-  side: THREE.DoubleSide,
+  side: 2,
   //   shadowSide: THREE.DoubleSide,
 });
 

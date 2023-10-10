@@ -29,8 +29,9 @@ mesh.geometry.translate(0, 100, 0);
 console.log("mesh.position.x", mesh.position.x);
 console.log("mesh2.position.x", mesh2.position.x);
 // console.log("mesh.geometry", mesh.geometry);
+// console.log("mesh2.geometry", mesh2.geometry);
 
 //相同
-console.log("mesh.material", mesh.material);
-console.log("mesh2.material", mesh2.material);
+// console.log("mesh.material", mesh.material);
+// console.log("mesh2.material", mesh2.material);
 export default mesh;

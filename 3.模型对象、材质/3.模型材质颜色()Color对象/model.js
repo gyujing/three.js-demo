@@ -10,13 +10,16 @@ const material = new THREE.MeshLambertMaterial({
   opacity: 0.8,
 });
 
+const color = new THREE.Color();//默认是纯白色0xffffff。
+console.log('查看颜色对象结构',color);//可以查看rgb的值
+
 // material.color.r = 1;
 // material.color.setRGB(1, 0, 1);
-// material.color.setHex(0x00ff00);
-// material.color.setStyle("#00ff00");
+// material.color.setHex(0x40E0D0);
+// material.color.setStyle("#40E0D0");
 
-material.color.set(0x00ff00); //十六进制方式设置颜色
-material.color.set("#00ff00"); //前端CSS颜色值设置颜色
+// material.color.set(0x40E0D0); //十六进制方式设置颜色
+// material.color.set("#40E0D0"); //前端CSS颜色值设置颜色
 
 console.log(material.color);
 

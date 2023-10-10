@@ -14,11 +14,13 @@ const material = new THREE.MeshLambertMaterial({
 const mesh = new THREE.Mesh(geometry, material); //网格模型对象Mesh
 
 // const v = new THREE.Euler(0, Math.PI / 2, 0);
+// v.x = Math.PI;
+// v.set(Math.PI, 0, Math.PI/2)
 // console.log(v);
-// mesh.rotation.x = Math.PI / 8;
+mesh.rotation.x = Math.PI / 8;
 // mesh.rotation.x += Math.PI / 8;
-mesh.rotateX(Math.PI / 8);
-mesh.rotateX(Math.PI / 8);
+// mesh.rotateX(Math.PI / 8);
+// mesh.rotateX(Math.PI / 8);
 console.log(mesh.rotation);
 
 export default mesh;

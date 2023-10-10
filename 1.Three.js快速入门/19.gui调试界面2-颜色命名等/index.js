@@ -110,7 +110,7 @@ gui
   .onChange(function (value) {
     pointLight.intensity = value;
   });
-//onchange需要点击几何体才起作用
+//onchange需要转动几何体才起作用
 gui.add(mesh.position, "x", 0, 180).onChange(function (value) {
   mesh.position.x = value;
 });

@@ -47,8 +47,8 @@ document.body.appendChild(renderer.domElement);
 function render() {
   renderer.render(scene, camera);
   //   model.rotateX(Math.PI / 80);
-  model.rotation.x += Math.PI / 80;
-  requestAnimationFrame(render);
+  // model.rotation.x += Math.PI / 80;
+  // requestAnimationFrame(render);
 }
 render();
 /**

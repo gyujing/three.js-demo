@@ -1,7 +1,7 @@
 import * as THREE from "three";
 
 // 4）、矩形平面
-const geometry = new THREE.BoxGeometry(100, 100, 100);
+const geometry = new THREE.BoxGeometry(50, 50, 50);
 
 // 3、创建一个材质对象Material，
 const material = new THREE.MeshLambertMaterial({
@@ -26,13 +26,14 @@ const mesh = new THREE.Mesh(geometry, material); //网格模型对象Mesh
 
 //平移
 // mesh.translateX(100);
-// const v = new THREE.Vector3(1, 1, 1);
-// v.normalize(); //该向量转换为单位向量
-// mesh.translateOnAxis(v, 100); //normalize后向x、y、z对角线方向平移100；不然分别向x、y、z移100
+const v = new THREE.Vector3(1, 1, 0);
+v.normalize(); //该向量转换为单位向量
+console.log("v",v);
+mesh.translateOnAxis(v, 100); //normalize后向x、y、z对角线方向平移100；不然分别向x、y、z移100
 
 // mesh.scale.x = 2;
-mesh.scale.set(2, 0.5, 1.5);
+// mesh.scale.set(2, 0.5, 1.5);
 
-// console.log("mesh.position", mesh.position);
+console.log("mesh.position", mesh.position);
 
 export default mesh;

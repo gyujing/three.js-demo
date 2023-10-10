@@ -4,29 +4,14 @@ const geometry = new THREE.BufferGeometry();
 
 //类型化数组创建顶点数据
 const vertices = new Float32Array([
-  0,
-  0,
-  0, //顶点1坐标，索引0
+  0, 0, 0, //顶点1坐标，索引0
+  0, 100, 0, //顶点2坐标，索引1
+  0, 0, 100, //顶点3坐标，索引2
 
-  0,
-  100,
-  0, //顶点2坐标，索引1
+  //   0, 0, 100, //顶点4坐标
+  //   0, 100, 0, //顶点5坐标
 
-  0,
-  0,
-  100, //顶点3坐标，索引2
-
-  //   0,
-  //   0,
-  //   100, //顶点4坐标
-
-  //   0,
-  //   100,
-  //   0, //顶点5坐标
-
-  0,
-  100,
-  100, //顶点6坐标，索引3
+  0, 100, 100, //顶点6坐标，索引3
 ]);
 
 // 创建属性缓冲区对象
@@ -38,13 +23,25 @@ geometry.attributes.position = new THREE.BufferAttribute(vertices, 3);
 const indexes = new Uint16Array([
   // 下面索引值对应顶点位置数据中的顶点坐标
   0, 1, 2, 1, 2, 3,
+  // 0, 1, 2,  2, 3,1,
 ]);
 
 // 索引数据赋值给几何体的index属性，属性缓冲区
 geometry.index = new THREE.BufferAttribute(indexes, 1); //1个为一组
 
+// 每个顶点都有一个法线数据
+const normals = new Float32Array([
+  1, 0, 0,
+  1, 0, 0,
+  1, 0, 0,
+  1, 0, 0,
+  
+]); //顶点1法线( 法向量 )
+
+geometry.attributes.normal = new THREE.BufferAttribute(normals, 3);
+
 // 点渲染模式
-const material = new THREE.MeshBasicMaterial({
+const material = new THREE.MeshLambertMaterial({
   color: 0xffff00,
   //   side: THREE.BackSide,//背面可见
   side: THREE.DoubleSide, //双面可见
