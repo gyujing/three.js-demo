@@ -21,7 +21,8 @@ const geometry = new THREE.BoxGeometry(100, 100, 100);
 const material = new THREE.MeshPhongMaterial({
   color: 0xff0000,
   shininess: 20, //高光部分的亮度，默认30
-  specular: 0x444444, //高光部分的颜色
+  specular: 0xffffff, //高光部分的颜色
+  // specular: 0x444444, //高光部分的颜色
 });
 
 // 4、网格模型Mesh

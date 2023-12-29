@@ -17,11 +17,11 @@ const vertices = new Float32Array([
 const attribue = new THREE.BufferAttribute(vertices, 3); //2 x,y z默认0
 // 设置几何体attributes属性的位置属性
 geometry.attributes.position = attribue;
-// 点渲染模式
+// 矩形渲染模式
 const material = new THREE.MeshBasicMaterial({
   color: 0xffff00,
-  //   side: THREE.BackSide,//背面可见
-  side: THREE.DoubleSide, //双面可见
+    side: THREE.BackSide,//背面可见
+  // side: THREE.DoubleSide, //双面可见
 });
 
 const mesh = new THREE.Mesh(geometry, material); //点模型对象

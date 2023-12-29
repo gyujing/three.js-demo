@@ -31,19 +31,18 @@ geometry.index = new THREE.BufferAttribute(indexes, 1); //1个为一组
 
 // 每个顶点都有一个法线数据
 const normals = new Float32Array([
-  1, 0, 0,
-  1, 0, 0,
-  1, 0, 0,
-  1, 0, 0,
-  
+  0, 0, 1, //顶点1法线( 法向量 )
+  0, 0, 1, //顶点2法线
+  0, 0, 1, //顶点3法线
+  0, 0, 1, //顶点4法线
 ]); //顶点1法线( 法向量 )
 
 geometry.attributes.normal = new THREE.BufferAttribute(normals, 3);
 
-// 点渲染模式
-const material = new THREE.MeshLambertMaterial({
+// 点渲染模式  MeshBasicMaterial
+const material = new THREE.MeshPhongMaterial({
   color: 0xffff00,
-  //   side: THREE.BackSide,//背面可见
+    // side: THREE.BackSide,//背面可见
   side: THREE.DoubleSide, //双面可见
 });
 

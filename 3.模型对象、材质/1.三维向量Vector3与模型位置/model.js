@@ -26,13 +26,23 @@ const mesh = new THREE.Mesh(geometry, material); //网格模型对象Mesh
 
 //平移
 // mesh.translateX(100);
-const v = new THREE.Vector3(1, 1, 0);
-v.normalize(); //该向量转换为单位向量
-console.log("v",v);
-mesh.translateOnAxis(v, 100); //normalize后向x、y、z对角线方向平移100；不然分别向x、y、z移100
+// const v = new THREE.Vector3(1, 1, 1);
+// v.normalize(); //该向量转换为单位向量
+// console.log("v",v);
+// mesh.translateOnAxis(v, 100); //normalize后向x、y、z对角线方向平移100；不然分别向x、y、z移100
+// mesh.translateX(100)
 
+// 缩放
 // mesh.scale.x = 2;
 // mesh.scale.set(2, 0.5, 1.5);
+
+// 旋转
+// mesh.rotation.x += Math.PI/4;
+// mesh.rotateX(Math.PI/4);
+
+const v = new THREE.Vector3(0,1,0);
+// v.normalize(); //该向量转换为单位向量
+mesh.rotateOnAxis(v,Math.PI/4)
 
 console.log("mesh.position", mesh.position);
 

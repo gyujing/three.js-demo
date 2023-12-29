@@ -14,15 +14,18 @@ scene.add(axesHelper);
 
 // 2、
 // 1）、长方体
+// width — X 轴上面的宽度，默认值为 1。
+// height — Y 轴上面的高度，默认值为 1。
+// depth — Z 轴上面的深度，默认值为 1。
 // const geometry = new THREE.BoxGeometry(100, 100, 100);
 // 2）、球体
 // const geometry = new THREE.SphereGeometry(50);
 // 3）、圆柱
-// const geometry = new THREE.CylinderGeometry(50, 100, 50); //顶部半径、底部半径、高
+const geometry = new THREE.CylinderGeometry(50, 100, 50); //顶部半径、底部半径、高
 // 4）、矩形平面
 // const geometry = new THREE.PlaneGeometry(40, 50);
 // 5）、圆形平面
-const geometry = new THREE.CircleGeometry(100);
+// const geometry = new THREE.CircleGeometry(100);
 
 // 3、创建一个材质对象Material，
 const material = new THREE.MeshLambertMaterial({

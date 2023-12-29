@@ -18,5 +18,5 @@ console.log("material.shadowSide", material.shadowSide); //0、1、2
 console.log("material.name", material.name);
 // 4、网格模型Mesh
 const mesh = new THREE.Mesh(geometry, material); //网格模型对象Mesh
-
+console.log("mesh",mesh);
 export default mesh;
