@@ -18,7 +18,8 @@ scene.add(axesHelper);
 /**
  * 光源
  */
-const light = new THREE.PointLight(0xffffff,1);
+// const light = new THREE.PointLight(0xffffff,1);
+const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 1 );
 light.position.set(400, 200, 200); //点光源放在x轴上
 scene.add(light); //点光源添加到场景中
 
