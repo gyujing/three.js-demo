@@ -9,8 +9,14 @@ const model = new THREE.Group();
 
 loader.load("../金属.glb", function (gltf) {
   console.log(gltf.scene);
-  gltf.scene.children[1].material.metalness = 0.5;
-  gltf.scene.children[1].material.roughness = 0.4;
+  gltf.scene.traverse(function (obj) {
+    if (obj.isMesh) {
+      // 金属度
+      obj.material.metalness = 1.0;
+      // 粗糙度
+      obj.material.roughness = 0.0;
+    }
+  });
   model.add(gltf.scene)
 })
 
