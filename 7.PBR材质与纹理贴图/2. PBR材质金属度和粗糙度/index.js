@@ -29,7 +29,7 @@ scene.add(ambient);
  * 透视投影相机
  */
 const width = window.innerWidth;
-const height = window.innerHeight;
+const height = window.innerHeight - 100;
 const camera = new THREE.PerspectiveCamera(30, width / height, 1, 3000);
 camera.position.set(40.0, 40.0,40.0);
 camera.lookAt(0, 0, 0);

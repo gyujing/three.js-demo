@@ -14,7 +14,7 @@ loader.load("../金属.glb", function (gltf) {
       // 金属度
       obj.material.metalness = 1.0;
       // 粗糙度
-      obj.material.roughness = 0.0;
+      obj.material.roughness = 0.5;
     }
   });
   model.add(gltf.scene)
