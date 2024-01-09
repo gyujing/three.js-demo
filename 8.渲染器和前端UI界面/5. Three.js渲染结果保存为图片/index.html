@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>canvas画布布局</title>
+</head>
+<style>
+	body {
+		overflow: hidden;
+		margin: 0px;
+		color: #fff;
+		background: #555555;
+	}
+
+	#main{
+		position: absolute;
+		left: 50%;
+		bottom: 20%;
+		display: flex;
+		margin-left: -60px;
+		z-index: 1;
+	}
+	.bu{
+		width: 40px;
+		height: 40px;
+		border: 1px solid white;
+		cursor: pointer;
+		margin: 0 10px;
+		text-align: center;
+		line-height: 40px;
+	}
+
+</style>
+
+<body>
+
+	<div id="main">
+		<div id="download" class="bu">下载</div>
+	</div>
+</body>
+<!-- 具体路径配置，你根据自己文件目录设置，我的是课件中源码形式 -->
+<script type="importmap">
+    {
+		"imports": {
+			"three": "../../three.js-r150/build/three.module.js",
+			"three/addons/": "../../three.js-r150/examples/jsm/"
+		}
+	}
+</script>
+<script type="module" src="./index.js"></script>
+
+
+</html>

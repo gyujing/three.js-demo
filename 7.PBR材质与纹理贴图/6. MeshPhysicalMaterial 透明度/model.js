@@ -42,6 +42,33 @@ loader.load("../轿车.glb", function (gltf) {
   // matFolder.add(mesh.material, "reflectivity", 0, 1);
   // matFolder.add(mesh.material, "clearcoatRoughness", 0, 1);
 
+
+  const mesh2 = gltf.scene.getObjectByName('玻璃03');
+  console.log(mesh2);
+  mesh2.material = new THREE.MeshPhysicalMaterial({
+    color: mesh.material.color, //默认颜色
+    metalness: 0.0,// 玻璃，非金属
+    roughness: 0.0,//玻璃，非金属
+    envMap: textureCube, //环境贴图
+    envMapIntensity: 2.5, //环境贴图对Mesh表面影响程度
+    transmission: 0.8, //透光率
+    ior: 1.5, //折射率
+    // reflectivity:0.5,  //反射率
+  })
+
+  const mesh3 = gltf.scene.getObjectByName('玻璃06');
+  console.log(mesh3);
+  mesh3.material = new THREE.MeshPhysicalMaterial({
+    color: mesh.material.color, //默认颜色
+    metalness: 0.0,// 玻璃，非金属
+    roughness: 0.0,//玻璃，非金属
+    envMap: textureCube, //环境贴图
+    envMapIntensity: 2.5, //环境贴图对Mesh表面影响程度
+    transmission: 0.8, //透光率
+    ior: 1.5, //折射率
+    // reflectivity:0.5,  //反射率
+  })
+  
   model.add(gltf.scene)
 })
 

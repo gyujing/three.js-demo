@@ -72,8 +72,8 @@ const controls = new OrbitControls(camera, renderer.domElement);
 // });
 
 
-controls.target.set(0, 0, 0);
-controls.update();
+// controls.target.set(0, 0, 0);
+// controls.update();
 
 
 // 画布跟随窗口变化

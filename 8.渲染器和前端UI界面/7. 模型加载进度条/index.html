@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>进度条</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+    }
+    #process{
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        z-index: 1;
+        margin-left: -150px;
+        width: 300px;
+        height: 40px;
+        background-color: grey;
+        border-radius: 20px;
+        border:1px solid white;
+    }
+    #box{
+        width: 0;
+        height: 100%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color: aqua;
+    }
+</style>
+
+<body>
+    <div id="process">
+        <div id="box"></div>
+    </div>
+</body>
+<!-- 具体路径配置，你根据自己文件目录设置，我的是课件中源码形式 -->
+<script type="importmap">
+    {
+		"imports": {
+			"three": "../../three.js-r150/build/three.module.js",
+            "three/addons/": "../../three.js-r150/examples/jsm/"
+		}
+	}
+</script>
+<script type="module" src="./index.js"></script>
+</html>
