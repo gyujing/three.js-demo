@@ -22,7 +22,7 @@ const material = new THREE.LineBasicMaterial({
 })
 
 // 3、模型
-const model = new THREE.LineLoop(geometry, material);
+const model = new THREE.Line(geometry, material);
 // const model = new THREE.Points(geometry, material);
 
 
