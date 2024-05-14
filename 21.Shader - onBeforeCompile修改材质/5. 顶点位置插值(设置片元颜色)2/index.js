@@ -15,12 +15,12 @@ const axesHelper = new THREE.AxesHelper(100);
 scene.add(axesHelper);
 
 
-// //光源设置
-// const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-// directionalLight.position.set(100, 60, 50);
-// scene.add(directionalLight);
-// const ambient = new THREE.AmbientLight(0xffffff, 1.0);
-// scene.add(ambient);
+//光源设置
+const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+directionalLight.position.set(100, 60, 50);
+scene.add(directionalLight);
+const ambient = new THREE.AmbientLight(0xffffff, 1.0);
+scene.add(ambient);
 
 
 //相机
@@ -43,6 +43,7 @@ document.body.appendChild(renderer.domElement);
 
 // 渲染循环
 function render() {
+    // model.rotateZ(0.01)
     renderer.render(scene, camera);
     requestAnimationFrame(render);
 }
